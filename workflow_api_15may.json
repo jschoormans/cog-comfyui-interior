@@ -1,0 +1,322 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 20,
+      "steps": 30,
+      "cfg": 6,
+      "sampler_name": "dpmpp_2m_sde_gpu",
+      "scheduler": "exponential",
+      "denoise": 0.9,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "33",
+        0
+      ],
+      "negative": [
+        "33",
+        1
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "Realistic_Vision_V5.1-inpainting.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": [
+        "32",
+        1
+      ],
+      "height": [
+        "32",
+        2
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "photo of a beautiful living room, modern design, modernist, cozy\nhigh resolution, highly detailed, 4k",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "blurry, illustration, distorted, horror",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "12": {
+    "inputs": {
+      "image": "https://cloud.funda.nl/valentina_media/188/991/506_1440x960.jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "14": {
+    "inputs": {
+      "control_net_name": "depth-zoe-xl-v1.0-controlnet.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "16": {
+    "inputs": {
+      "strength": 0.75,
+      "conditioning": [
+        "6",
+        0
+      ],
+      "control_net": [
+        "14",
+        0
+      ],
+      "image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "ControlNetApply",
+    "_meta": {
+      "title": "Apply ControlNet"
+    }
+  },
+  "17": {
+    "inputs": {
+      "images": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "21": {
+    "inputs": {
+      "resolution": 512,
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "Zoe-DepthMapPreprocessor",
+    "_meta": {
+      "title": "Zoe Depth Map"
+    }
+  },
+  "23": {
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "32": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "interpolation": "nearest",
+      "keep_proportion": true,
+      "condition": "always",
+      "multiple_of": 0,
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "33": {
+    "inputs": {
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ],
+      "pixels": [
+        "32",
+        0
+      ],
+      "mask": [
+        "52",
+        0
+      ]
+    },
+    "class_type": "InpaintModelConditioning",
+    "_meta": {
+      "title": "InpaintModelConditioning"
+    }
+  },
+  "41": {
+    "inputs": {
+      "op": "union (max)",
+      "clamp_result": "yes",
+      "round_result": "no"
+    },
+    "class_type": "Combine Masks",
+    "_meta": {
+      "title": "Combine Masks"
+    }
+  },
+  "48": {
+    "inputs": {
+      "prompt": "ceiling",
+      "negative_prompt": "",
+      "precision": 0.5,
+      "normalize": "no",
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "Mask By Text",
+    "_meta": {
+      "title": "Mask By Text"
+    }
+  },
+  "49": {
+    "inputs": {
+      "images": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "50": {
+    "inputs": {
+      "op": "union (max)",
+      "clamp_result": "yes",
+      "round_result": "no",
+      "image1": [
+        "48",
+        0
+      ],
+      "image2": [
+        "51",
+        0
+      ]
+    },
+    "class_type": "Combine Masks",
+    "_meta": {
+      "title": "Combine Masks"
+    }
+  },
+  "51": {
+    "inputs": {
+      "prompt": "window",
+      "negative_prompt": "",
+      "precision": 0.5,
+      "normalize": "no",
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "Mask By Text",
+    "_meta": {
+      "title": "Mask By Text"
+    }
+  },
+  "52": {
+    "inputs": {
+      "mask": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "54": {
+    "inputs": {
+      "method": "intensity",
+      "image": [
+        "50",
+        0
+      ]
+    },
+    "class_type": "Image To Mask",
+    "_meta": {
+      "title": "Image To Mask"
+    }
+  }
+}
