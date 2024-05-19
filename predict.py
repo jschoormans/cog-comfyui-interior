@@ -7,6 +7,7 @@ from PIL import Image
 from typing import List
 from cog import BasePredictor, Input, Path
 from comfyui import ComfyUI
+import json
 
 OUTPUT_DIR = "/tmp/outputs"
 INPUT_DIR = "/tmp/inputs"
@@ -33,21 +34,17 @@ class Predictor(BasePredictor):
 
     def handle_input_file(self, input_file: Path):
         file_extension = os.path.splitext(input_file)[1].lower()
-        if file_extension == ".tar":
-            with tarfile.open(input_file, "r") as tar:
-                tar.extractall(INPUT_DIR)
-        elif file_extension == ".zip":
-            with zipfile.ZipFile(input_file, "r") as zip_ref:
-                zip_ref.extractall(INPUT_DIR)
-        elif file_extension in [".jpg", ".jpeg", ".png", ".webp"]:
-            shutil.copy(input_file, os.path.join(INPUT_DIR, f"input{file_extension}"))
+        if file_extension in [".jpg", ".jpeg", ".png", ".webp"]:
+            filename = f"input{file_extension}"
+            shutil.copy(input_file, os.path.join(INPUT_DIR, filename))
         else:
             raise ValueError(f"Unsupported file type: {file_extension}")
 
-        print("====================================")
-        print(f"Inputs uploaded to {INPUT_DIR}:")
-        self.log_and_collect_files(INPUT_DIR)
-        print("====================================")
+        return filename
+
+    def update_workflow(self, workflow, **kwargs):
+        load_image = workflow["12"]["inputs"]
+        load_image["image"] = kwargs["filename"]
 
     def log_and_collect_files(self, directory, prefix=""):
         files = []
@@ -65,12 +62,8 @@ class Predictor(BasePredictor):
 
     def predict(
         self,
-        workflow_json: str = Input(
-            description="Your ComfyUI workflow as JSON. You must use the API version of your workflow. Get it from ComfyUI using ‘Save (API format)’. Instructions here: https://github.com/fofr/cog-comfyui",
-            default="",
-        ),
-        input_file: Path = Input(
-            description="Input image, tar or zip file. Read guidance on workflows and input files here: https://github.com/fofr/cog-comfyui. Alternatively, you can replace inputs with URLs in your JSON workflow and the model will download them.",
+        image: Path = Input(
+            description="An image of a person to be converted to a sticker",
             default=None,
         ),
         return_temp_files: bool = Input(
@@ -96,10 +89,17 @@ class Predictor(BasePredictor):
         """Run a single prediction on the model"""
         self.cleanup()
 
-        if input_file:
-            self.handle_input_file(input_file)
+        if image is None:
+            raise ValueError("No image provided")
+        filename = self.handle_input_file(image)
 
-        wf = self.comfyUI.load_workflow(workflow_json or EXAMPLE_WORKFLOW_JSON)
+        workflow = json.loads(EXAMPLE_WORKFLOW_JSON)
+        self.update_workflow(
+            workflow,
+            filename=filename,
+        )
+
+        wf = self.comfyUI.load_workflow(workflow)
 
         if randomise_seeds:
             self.comfyUI.randomise_seeds(wf)
