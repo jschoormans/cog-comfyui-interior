@@ -1,5 +1,5 @@
 ## Checkpoints
-
+- realvisxlV40_v30InpaintBakedvae.safetensors
 - 512-inpainting-ema.safetensors
 - absolutereality_v181.safetensors
 - albedobaseXL_v13.safetensors

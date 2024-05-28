@@ -81,7 +81,7 @@
   },
   {
     "repo": "https://github.com/WASasquatch/was-node-suite-comfyui",
-    "commit": "33534f2"
+    "commit": "7765fb83742308acae4fcb7dc2deb65af5d41a99"
   },
   {
     "repo": "https://github.com/fofr/comfyui_segment_anything",
@@ -122,5 +122,10 @@
   {
     "repo": "https://github.com/blepping/comfyui_jankhidiffusion",
     "commit": "e54ff4d"
+  },
+  {
+    "repo": "https://github.com/time-river/ComfyUI-CLIPSeg",
+    "commit": "288a19f26d05e2d3b79ea7bfe7c4d31e26d1edd8"
   }
+
 ]

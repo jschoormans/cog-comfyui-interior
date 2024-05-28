@@ -9,3 +9,6 @@ Interior redecorating while keeping the ceiling and windows. Uses SDXL, controln
 ## Usage
 
     sudo cog predict -i image=[URL]
+
+
+    

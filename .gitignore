@@ -12,5 +12,5 @@ __pycache__
 *.webp
 weights.txt
 manifest.txt
-updated_weights.json
+# updated_weights.json
 .cog

@@ -16,7 +16,7 @@ COMFYUI_TEMP_OUTPUT_DIR = "ComfyUI/temp"
 mimetypes.add_type("image/webp", ".webp")
 
 
-with open("workflow_api_19mei.json", "r") as file:
+with open("workflow_api_28may_2.json", "r") as file:
     EXAMPLE_WORKFLOW_JSON = file.read()
 
 
@@ -45,6 +45,19 @@ class Predictor(BasePredictor):
     def update_workflow(self, workflow, **kwargs):
         load_image = workflow["12"]["inputs"]
         load_image["image"] = kwargs["filename"]
+        
+
+        prompt = workflow["6"]["inputs"]
+        prompt[
+            "text"
+        ] = f"{kwargs['prompt']}"
+        
+        neg_prompt = workflow["7"]["inputs"]
+        neg_prompt[
+            "text"
+        ] = f"{kwargs['negative_prompt']}"
+
+        
 
     def log_and_collect_files(self, directory, prefix=""):
         files = []
@@ -66,6 +79,14 @@ class Predictor(BasePredictor):
             description="An image of a person to be converted to a sticker",
             default=None,
         ),
+        prompt: str = Input(
+            description="Prompt to generate the sticker",
+            default="photo of a beautiful living room, modern design, modernist, cozy\nhigh resolution, highly detailed, 4k",
+        ),
+        negative_prompt: str = Input(
+            description="Negative prompt to generate the sticker",
+            default="blurry, illustration, distorted, horror",
+        ),        
         return_temp_files: bool = Input(
             description="Return any temporary files, such as preprocessed controlnet images. Useful for debugging.",
             default=False,
@@ -97,6 +118,8 @@ class Predictor(BasePredictor):
         self.update_workflow(
             workflow,
             filename=filename,
+            prompt=prompt,
+            negative_prompt=negative_prompt,
         )
 
         wf = self.comfyUI.load_workflow(workflow)

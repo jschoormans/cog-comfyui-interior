@@ -47,3 +47,13 @@ subprocess.run(
         os.path.join(dest_dir, "was-node-suite-comfyui/"),
     ]
 )
+
+
+# copy custom_nodes/ComfyUI-CLIPSeg/custom_nodes/clipseg.py to custom_nodes/
+try:
+    print("Copying custom_nodes/ComfyUI-CLIPSeg/custom_nodes/ComfyUI-CLIPSeg/clipseg.py to custom_nodes/")
+    
+    subprocess.run(["cp", "ComfyUI/custom_nodes/ComfyUI-CLIPSeg/custom_nodes/clipseg.py", "ComfyUI/custom_nodes/"])
+except Exception as e:
+    print("Failed to copy custom_nodes/ComfyUI-CLIPSeg/custom_nodes/clipseg.py to custom_nodes/")
+    print(e)
