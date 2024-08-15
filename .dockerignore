@@ -38,6 +38,7 @@ ComfyUI/user
 
 ComfyUI/models/*
 !ComfyUI/models/checkpoints/realvisxlV40_v30InpaintBakedvae.safetensors
+!ComfyUI/models/controlnet/depth-zoe-xl-v1.0-controlnet.safetensors
 
 ComfyUI/custom_nodes/comfyUI_controlnet_aux/ckpts
 ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/models

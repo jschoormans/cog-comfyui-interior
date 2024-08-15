@@ -1,0 +1,366 @@
+{
+  "3": {
+    "inputs": {
+      "seed": 809825757530108,
+      "steps": 20,
+      "cfg": 6,
+      "sampler_name": "dpmpp_2m_sde_gpu",
+      "scheduler": "exponential",
+      "denoise": 1,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "60",
+        0
+      ],
+      "negative": [
+        "60",
+        1
+      ],
+      "latent_image": [
+        "33",
+        2
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "4": {
+    "inputs": {
+      "ckpt_name": "realvisxlV40_v30InpaintBakedvae.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "6": {
+    "inputs": {
+      "text": "photo of a beautiful living room,\nBohemian style, \nhigh resolution, highly detailed, 4k,\nextreme realism, photography, interior photography",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": "blurry, illustration, distorted, horror",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "12": {
+    "inputs": {
+      "image": "503_1440.jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "14": {
+    "inputs": {
+      "control_net_name": "depth-zoe-xl-v1.0-controlnet.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "21": {
+    "inputs": {
+      "resolution": 256,
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "Zoe-DepthMapPreprocessor",
+    "_meta": {
+      "title": "Zoe Depth Map"
+    }
+  },
+  "26": {
+    "inputs": {
+      "text": "door",
+      "blur": 0.30000000000000004,
+      "threshold": 0.5,
+      "dilation_factor": 1,
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "CLIPSeg",
+    "_meta": {
+      "title": "CLIPSeg"
+    }
+  },
+  "30": {
+    "inputs": {
+      "text": "windows",
+      "blur": 0.30000000000000004,
+      "threshold": 0.5,
+      "dilation_factor": 1,
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "CLIPSeg",
+    "_meta": {
+      "title": "CLIPSeg"
+    }
+  },
+  "32": {
+    "inputs": {
+      "width": 1536,
+      "height": 1536,
+      "interpolation": "lanczos",
+      "keep_proportion": true,
+      "condition": "always",
+      "multiple_of": 0,
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "33": {
+    "inputs": {
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ],
+      "pixels": [
+        "32",
+        0
+      ],
+      "mask": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "InpaintModelConditioning",
+    "_meta": {
+      "title": "InpaintModelConditioning"
+    }
+  },
+  "34": {
+    "inputs": {
+      "mask": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "35": {
+    "inputs": {
+      "text": "ceiling",
+      "blur": 0.30000000000000004,
+      "threshold": 0.2,
+      "dilation_factor": 1,
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "CLIPSeg",
+    "_meta": {
+      "title": "CLIPSeg"
+    }
+  },
+  "45": {
+    "inputs": {
+      "input_image": [
+        "32",
+        0
+      ],
+      "mask_1": [
+        "30",
+        0
+      ],
+      "mask_2": [
+        "35",
+        0
+      ],
+      "mask_3": [
+        "26",
+        0
+      ]
+    },
+    "class_type": "CombineSegMasks",
+    "_meta": {
+      "title": "CombineSegMasks"
+    }
+  },
+  "49": {
+    "inputs": {
+      "strength": 0.8,
+      "start_percent": 0,
+      "end_percent": 0.6,
+      "positive": [
+        "33",
+        0
+      ],
+      "negative": [
+        "33",
+        1
+      ],
+      "control_net": [
+        "14",
+        0
+      ],
+      "image": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "ControlNetApplyAdvanced",
+    "_meta": {
+      "title": "Apply ControlNet (Advanced)"
+    }
+  },
+  "56": {
+    "inputs": {
+      "text": "furniture",
+      "blur": 5,
+      "threshold": 0,
+      "dilation_factor": 10,
+      "image": [
+        "32",
+        0
+      ]
+    },
+    "class_type": "CLIPSeg",
+    "_meta": {
+      "title": "CLIPSeg"
+    }
+  },
+  "58": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "60": {
+    "inputs": {
+      "strength": 0.6,
+      "start_percent": 0,
+      "end_percent": 0.6,
+      "positive": [
+        "33",
+        0
+      ],
+      "negative": [
+        "33",
+        1
+      ],
+      "control_net": [
+        "61",
+        0
+      ],
+      "image": [
+        "21",
+        0
+      ],
+      "mask_optional": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "ACN_AdvancedControlNetApply",
+    "_meta": {
+      "title": "Apply Advanced ControlNet 🛂🅐🅒🅝"
+    }
+  },
+  "61": {
+    "inputs": {
+      "control_net_name": "depth-zoe-xl-v1.0-controlnet.safetensors"
+    },
+    "class_type": "ControlNetLoaderAdvanced",
+    "_meta": {
+      "title": "Load Advanced ControlNet Model 🛂🅐🅒🅝"
+    }
+  },
+  "62": {
+    "inputs": {
+      "mask": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "InvertMask",
+    "_meta": {
+      "title": "InvertMask"
+    }
+  },
+  "65": {
+    "inputs": {
+      "value": 0.2,
+      "mask": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ThresholdMask",
+    "_meta": {
+      "title": "ThresholdMask"
+    }
+  }
+}

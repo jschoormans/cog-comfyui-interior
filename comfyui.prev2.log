@@ -1,49 +1,53 @@
-## ComfyUI-Manager: installing dependencies done.
-[2024-05-28 10:52] ** ComfyUI startup time: 2024-05-28 10:52:45.013233
-[2024-05-28 10:52] ** Platform: Linux
-[2024-05-28 10:52] ** Python version: 3.10.6 (main, May 28 2024, 10:37:45) [GCC 11.4.0]
-[2024-05-28 10:52] ** Python executable: /root/.pyenv/versions/3.10.6/bin/python
-[2024-05-28 10:52] ** Log path: /src/comfyui.log
-[2024-05-28 10:52] 
+## ComfyUI-Manager: installing dependencies. (GitPython)
+[2024-08-15 14:50] ## ComfyUI-Manager: installing dependencies done.
+[2024-08-15 14:50] ** ComfyUI startup time: 2024-08-15 14:50:18.410795
+[2024-08-15 14:50] ** Platform: Linux
+[2024-08-15 14:50] ** Python version: 3.10.6 (main, Jul 25 2024, 12:09:26) [GCC 11.4.0]
+[2024-08-15 14:50] ** Python executable: /root/.pyenv/versions/3.10.6/bin/python
+[2024-08-15 14:50] ** Log path: /src/comfyui.log
+[2024-08-15 14:50] 
 Prestartup times for custom nodes:
-[2024-05-28 10:52]    0.2 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Manager
-[2024-05-28 10:52] 
-Total VRAM 16106 MB, total RAM 64285 MB
-[2024-05-28 10:52] pytorch version: 2.3.0+cu121
-[2024-05-28 10:52] Set vram state to: NORMAL_VRAM
-[2024-05-28 10:52] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-[2024-05-28 10:52] VAE dtype: torch.bfloat16
-[2024-05-28 10:52] Using pytorch cross attention
-[2024-05-28 10:52] ------------------------------------------
-[2024-05-28 10:52] [34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m
-[2024-05-28 10:52] ------------------------------------------
-[2024-05-28 10:52] ** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
-[2024-05-28 10:52] ** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
-[2024-05-28 10:52] ------------------------------------------
-[2024-05-28 10:52] [36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
-[2024-05-28 10:52] [93mEfficiency Nodes Warning:[0m Failed to import python package 'simpleeval'; related nodes disabled.
-[2024-05-28 10:52] 
-[2024-05-28 10:52] Please 'pip install xformers'
-[2024-05-28 10:52] Please 'pip install apex'
-[2024-05-28 10:52] Please 'pip install xformers'
-[2024-05-28 10:52] ### Loading: ComfyUI-Manager (V2.35.1)
-[2024-05-28 10:52] ### ComfyUI Revision: UNKNOWN (The currently installed ComfyUI is not a Git repository)
-[2024-05-28 10:52] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
-[2024-05-28 10:52] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
-[2024-05-28 10:52] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
-[2024-05-28 10:52] ### Loading: ComfyUI-Impact-Pack (V4.87.6)
-[2024-05-28 10:52] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
-[2024-05-28 10:52] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
-[2024-05-28 10:52] ### Loading: ComfyUI-Impact-Pack (Subpack: V0.4)
-[2024-05-28 10:52] [Impact Pack] Wildcards loading done.
-[2024-05-28 10:52] Total VRAM 16106 MB, total RAM 64285 MB
-[2024-05-28 10:52] pytorch version: 2.3.0+cu121
-[2024-05-28 10:52] Set vram state to: NORMAL_VRAM
-[2024-05-28 10:52] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-[2024-05-28 10:52] VAE dtype: torch.bfloat16
-[2024-05-28 10:52] [0;33m[ReActor][0m - [38;5;173mSTATUS[0m - [0;32mRunning v0.4.1-b9 in ComfyUI[0m
-[2024-05-28 10:52] Torch version: 2.3.0+cu121
-[2024-05-28 10:52] Traceback (most recent call last):
+[2024-08-15 14:50]    8.3 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-08-15 14:50] 
+Total VRAM 16101 MB, total RAM 64287 MB
+[2024-08-15 14:50] pytorch version: 2.4.0+cu121
+[2024-08-15 14:50] Set vram state to: HIGH_VRAM
+[2024-08-15 14:50] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
+[2024-08-15 14:50] VAE dtype: torch.bfloat16
+[2024-08-15 14:50] Using pytorch cross attention
+[2024-08-15 14:50] /root/.pyenv/versions/3.10.6/lib/python3.10/site-packages/kornia/feature/lightglue.py:44: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @torch.cuda.amp.custom_fwd(cast_inputs=torch.float32)
+[2024-08-15 14:50] generated new fontManager
+[2024-08-15 14:50] ------------------------------------------
+[2024-08-15 14:50] [34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m
+[2024-08-15 14:50] ------------------------------------------
+[2024-08-15 14:50] ** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+[2024-08-15 14:50] ** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
+[2024-08-15 14:50] ------------------------------------------
+[2024-08-15 14:50] [36mEfficiency Nodes:[0m Attempting to add Control Net options to the 'HiRes-Fix Script' Node (comfyui_controlnet_aux add-on)...[92mSuccess![0m
+[2024-08-15 14:50] [93mEfficiency Nodes Warning:[0m Failed to import python package 'simpleeval'; related nodes disabled.
+[2024-08-15 14:50] 
+[2024-08-15 14:50] Please 'pip install xformers'
+[2024-08-15 14:50] Please 'pip install apex'
+[2024-08-15 14:50] Please 'pip install xformers'
+[2024-08-15 14:50] ### Loading: ComfyUI-Manager (V2.35.1)
+[2024-08-15 14:50] ### ComfyUI Revision: UNKNOWN (The currently installed ComfyUI is not a Git repository)
+[2024-08-15 14:50] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-08-15 14:50] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-08-15 14:50] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+[2024-08-15 14:50] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-08-15 14:50] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-08-15 14:50] ### Loading: ComfyUI-Impact-Pack (V4.87.6)
+[2024-08-15 14:50] ### Loading: ComfyUI-Impact-Pack (Subpack: V0.4)
+[2024-08-15 14:50] [Impact Pack] Wildcards loading done.
+[2024-08-15 14:50] Total VRAM 16101 MB, total RAM 64287 MB
+[2024-08-15 14:50] pytorch version: 2.4.0+cu121
+[2024-08-15 14:50] Set vram state to: HIGH_VRAM
+[2024-08-15 14:50] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
+[2024-08-15 14:50] VAE dtype: torch.bfloat16
+[2024-08-15 14:50] [0;33m[ReActor][0m - [38;5;173mSTATUS[0m - [0;32mRunning v0.4.1-b9 in ComfyUI[0m
+[2024-08-15 14:50] Torch version: 2.4.0+cu121
+[2024-08-15 14:50] Traceback (most recent call last):
   File "/src/ComfyUI/nodes.py", line 1879, in load_custom_node
     module_spec.loader.exec_module(module)
   File "<frozen importlib._bootstrap_external>", line 879, in exec_module
@@ -51,259 +55,80 @@ Total VRAM 16106 MB, total RAM 64285 MB
   File "<frozen importlib._bootstrap_external>", line 1073, in get_data
 FileNotFoundError: [Errno 2] No such file or directory: '/src/ComfyUI/custom_nodes/ComfyUI-CLIPSeg/__init__.py'
 
-[2024-05-28 10:52] Cannot import /src/ComfyUI/custom_nodes/ComfyUI-CLIPSeg module for custom nodes: [Errno 2] No such file or directory: '/src/ComfyUI/custom_nodes/ComfyUI-CLIPSeg/__init__.py'
-[2024-05-28 10:52] Total VRAM 16106 MB, total RAM 64285 MB
-[2024-05-28 10:52] pytorch version: 2.3.0+cu121
-[2024-05-28 10:52] Set vram state to: NORMAL_VRAM
-[2024-05-28 10:52] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
-[2024-05-28 10:52] VAE dtype: torch.bfloat16
-[2024-05-28 10:52] [34mFizzleDorf Custom Nodes: [92mLoaded[0m
-[2024-05-28 10:52] [VideoHelperSuite] - [0;33mWARNING[0m - Failed to import imageio_ffmpeg
-[2024-05-28 10:52] [AnimateDiffEvo] - [0;31mERROR[0m - No motion models found. Please download one and place in: ['/src/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/models', '/src/ComfyUI/models/animatediff_models']
-[2024-05-28 10:52] ### Loading: ComfyUI-Inspire-Pack (V0.59)
-[2024-05-28 10:52] [92m[tinyterraNodes] [32mLoaded[0m
-[2024-05-28 10:52] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
-[2024-05-28 10:52] [34mWAS Node Suite: [0m`ffmpeg_bin_path` is set to: /usr/bin/ffmpeg[0m
-[2024-05-28 10:52] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
-[2024-05-28 10:52] 
-Import times for custom nodes:
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/websocket_image_save.py
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-HyperSDXL1StepUnetScheduler
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Logic
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-IC-Light-Native
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-BRIA_AI-RMBG
-[2024-05-28 10:52]    0.0 seconds (IMPORT FAILED): /src/ComfyUI/custom_nodes/ComfyUI-CLIPSeg
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/comfyui-tooling-nodes
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/masquerade-nodes-comfyui
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI_InstantID
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI_essentials
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/comfyui_jankhidiffusion
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/comfyui_controlnet_aux
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/Derfuu_ComfyUI_ModdedNodes
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Manager
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-KJNodes
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-PhotoMaker-Plus
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved
-[2024-05-28 10:52]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI_tinyterraNodes
-[2024-05-28 10:52]    0.1 seconds: /src/ComfyUI/custom_nodes/comfyui-reactor-node
-[2024-05-28 10:52]    0.1 seconds: /src/ComfyUI/custom_nodes/clipseg.py
-[2024-05-28 10:52]    0.1 seconds: /src/ComfyUI/custom_nodes/comfyui_segment_anything
-[2024-05-28 10:52]    0.1 seconds: /src/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
-[2024-05-28 10:52]    0.1 seconds: /src/ComfyUI/custom_nodes/efficiency-nodes-comfyui
-[2024-05-28 10:52]    0.1 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack
-[2024-05-28 10:52]    0.1 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
-[2024-05-28 10:52]    0.1 seconds: /src/ComfyUI/custom_nodes/ComfyUI-layerdiffuse
-[2024-05-28 10:52]    0.3 seconds: /src/ComfyUI/custom_nodes/ComfyUI_FizzNodes
-[2024-05-28 10:52]    0.5 seconds: /src/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
-[2024-05-28 10:52]    1.0 seconds: /src/ComfyUI/custom_nodes/PuLID_ComfyUI
-[2024-05-28 10:52]    1.9 seconds: /src/ComfyUI/custom_nodes/was-node-suite-comfyui
-[2024-05-28 10:52] 
-[2024-05-28 10:52] Starting server
+[2024-08-15 14:50] Cannot import /src/ComfyUI/custom_nodes/ComfyUI-CLIPSeg module for custom nodes: [Errno 2] No such file or directory: '/src/ComfyUI/custom_nodes/ComfyUI-CLIPSeg/__init__.py'
+[2024-08-15 14:50] Traceback (most recent call last):
+  File "/src/ComfyUI/nodes.py", line 1879, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/src/ComfyUI/custom_nodes/ComfyUI-layerdiffuse/__init__.py", line 1, in <module>
+    from .layered_diffusion import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
+  File "/src/ComfyUI/custom_nodes/ComfyUI-layerdiffuse/layered_diffusion.py", line 23, in <module>
+    from .lib_layerdiffusion.models import TransparentVAEDecoder
+  File "/src/ComfyUI/custom_nodes/ComfyUI-layerdiffuse/lib_layerdiffusion/models.py", line 10, in <module>
+    from diffusers.models.unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block
+ModuleNotFoundError: No module named 'diffusers.models.unet_2d_blocks'
 
-[2024-05-28 10:52] To see the GUI go to: http://0.0.0.0:8188
-[2024-05-28 10:53] FETCH DATA from: /src/ComfyUI/custom_nodes/ComfyUI-Manager/extension-node-map.json [DONE]
-[2024-05-28 10:53] got prompt
-[2024-05-28 10:53] model_path is /src/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/ZoeD_M12_N.pt
-[2024-05-28 10:53] got prompt
-[2024-05-28 10:53] got prompt
-[2024-05-28 10:53] preprocessor_config.json: 100%|█████████| 380/380 [00:00<00:00, 1.06MB/s]
-[2024-05-28 10:53] tokenizer_config.json: 100%|████████████| 974/974 [00:00<00:00, 2.49MB/s]
-[2024-05-28 10:53] vocab.json: 100%|███████████████████| 1.06M/1.06M [00:00<00:00, 4.43MB/s]vocab.json: 100%|███████████████████| 1.06M/1.06M [00:00<00:00, 4.38MB/s]
-[2024-05-28 10:53] merges.txt: 100%|█████████████████████| 525k/525k [00:00<00:00, 6.28MB/s]
-[2024-05-28 10:53] special_tokens_map.json: 100%|██████████| 472/472 [00:00<00:00, 1.26MB/s]
-[2024-05-28 10:53] config.json: 100%|██████████████████| 4.73k/4.73k [00:00<00:00, 11.4MB/s]
-[2024-05-28 10:54] pytorch_model.bin: 100%|██████████████| 603M/603M [00:49<00:00, 12.1MB/s]pytorch_model.bin: 100%|██████████████| 603M/603M [00:49<00:00, 12.2MB/s]
-[2024-05-28 10:54] model_type EPS
-[2024-05-28 10:54] Using pytorch attention in VAE
-[2024-05-28 10:54] Using pytorch attention in VAE
-[2024-05-28 10:54] Requested to load SDXLClipModel
-[2024-05-28 10:54] Loading 1 new model
-[2024-05-28 10:54] Requested to load AutoencoderKL
-[2024-05-28 10:54] Loading 1 new model
-[2024-05-28 10:55] Requested to load ControlNet
-[2024-05-28 10:55] Requested to load SDXL
-[2024-05-28 10:55] Loading 2 new models
-[2024-05-28 10:55] 100%|████████████████████████████████████| 30/30 [00:20<00:00,  1.75it/s]100%|████████████████████████████████████| 30/30 [00:20<00:00,  1.48it/s]
-[2024-05-28 10:55] Prompt executed in 112.27 seconds
-[2024-05-28 10:55] got prompt
-[2024-05-28 10:55] 100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.57it/s]100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.38it/s]
-[2024-05-28 10:56] Prompt executed in 22.63 seconds
-[2024-05-28 10:56] got prompt
-[2024-05-28 10:56] 100%|████████████████████████████████████| 30/30 [00:25<00:00,  1.26it/s]100%|████████████████████████████████████| 30/30 [00:25<00:00,  1.20it/s]
-[2024-05-28 10:56] Prompt executed in 26.14 seconds
-[2024-05-28 10:56] 100%|████████████████████████████████████| 30/30 [00:28<00:00,  1.19it/s]100%|████████████████████████████████████| 30/30 [00:28<00:00,  1.05it/s]
-[2024-05-28 10:56] Prompt executed in 32.24 seconds
-[2024-05-28 10:57] model_path is /src/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/ZoeD_M12_N.pt
-[2024-05-28 10:57] 100%|████████████████████████████████████| 30/30 [00:24<00:00,  1.29it/s]100%|████████████████████████████████████| 30/30 [00:24<00:00,  1.22it/s]
-[2024-05-28 10:57] Prompt executed in 38.81 seconds
-[2024-05-28 11:16] got prompt
-[2024-05-28 11:16] Requested to load SDXLClipModel
-[2024-05-28 11:16] Loading 1 new model
-[2024-05-28 11:16] FETCH DATA from: /src/ComfyUI/custom_nodes/ComfyUI-Manager/extension-node-map.json [DONE]
-[2024-05-28 11:16] 100%|████████████████████████████████████| 30/30 [00:17<00:00,  1.82it/s]100%|████████████████████████████████████| 30/30 [00:17<00:00,  1.75it/s]
-[2024-05-28 11:16] Prompt executed in 19.78 seconds
-[2024-05-28 11:16] got prompt
-[2024-05-28 11:16] 100%|████████████████████████████████████| 30/30 [00:18<00:00,  1.68it/s]100%|████████████████████████████████████| 30/30 [00:18<00:00,  1.65it/s]
-[2024-05-28 11:16] Prompt executed in 19.01 seconds
-[2024-05-28 11:17] got prompt
-[2024-05-28 11:17] model_path is /src/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/ZoeD_M12_N.pt
-[2024-05-28 11:18] Requested to load SDXLClipModel
-[2024-05-28 11:18] Loading 1 new model
-[2024-05-28 11:18] 100%|████████████████████████████████████| 30/30 [00:18<00:00,  1.67it/s]100%|████████████████████████████████████| 30/30 [00:18<00:00,  1.65it/s]
-[2024-05-28 11:18] Prompt executed in 33.96 seconds
-[2024-05-28 11:19] got prompt
-[2024-05-28 11:19] 100%|████████████████████████████████████| 30/30 [00:19<00:00,  1.64it/s]100%|████████████████████████████████████| 30/30 [00:19<00:00,  1.55it/s]
-[2024-05-28 11:19] Prompt executed in 20.38 seconds
-[2024-05-28 11:20] got prompt
-[2024-05-28 11:21] 100%|████████████████████████████████████| 30/30 [00:20<00:00,  1.65it/s]100%|████████████████████████████████████| 30/30 [00:20<00:00,  1.46it/s]
-[2024-05-28 11:21] Prompt executed in 21.51 seconds
-[2024-05-28 11:21] got prompt
-[2024-05-28 11:21] model_path is /src/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/ZoeD_M12_N.pt
-[2024-05-28 11:21] 100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.53it/s]100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.36it/s]
-[2024-05-28 11:21] Prompt executed in 29.49 seconds
-[2024-05-28 11:23] got prompt
-[2024-05-28 11:23] model_path is /src/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/ZoeD_M12_N.pt
-[2024-05-28 11:23] 100%|████████████████████████████████████| 30/30 [00:20<00:00,  1.63it/s]100%|████████████████████████████████████| 30/30 [00:20<00:00,  1.44it/s]
-[2024-05-28 11:23] Prompt executed in 27.75 seconds
-[2024-05-28 11:26] FETCH DATA from: /src/ComfyUI/custom_nodes/ComfyUI-Manager/extension-node-map.json [DONE]
-[2024-05-28 11:27] got prompt
-[2024-05-28 11:27] Requested to load ControlNet
-[2024-05-28 11:27] Loading 1 new model
-[2024-05-28 11:28] 100%|████████████████████████████████████| 30/30 [00:19<00:00,  1.76it/s]100%|████████████████████████████████████| 30/30 [00:19<00:00,  1.53it/s]
-[2024-05-28 11:28] got prompt
-[2024-05-28 11:28] Prompt executed in 24.05 seconds
-[2024-05-28 11:28] Requested to load ControlNet
-[2024-05-28 11:28] Loading 1 new model
-[2024-05-28 11:28] 100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.58it/s]100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.39it/s]
-[2024-05-28 11:28] Prompt executed in 23.36 seconds
-[2024-05-28 11:29] got prompt
-[2024-05-28 11:29] Requested to load ControlNet
-[2024-05-28 11:29] Loading 1 new model
-[2024-05-28 11:29] 100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.58it/s]100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.40it/s]
-[2024-05-28 11:29] Prompt executed in 23.27 seconds
-[2024-05-28 11:29] got prompt
-[2024-05-28 11:29] Requested to load ControlNet
-[2024-05-28 11:29] Loading 1 new model
-[2024-05-28 11:30] 100%|████████████████████████████████████| 30/30 [00:25<00:00,  1.24it/s]100%|████████████████████████████████████| 30/30 [00:25<00:00,  1.17it/s]
-[2024-05-28 11:30] Prompt executed in 27.68 seconds
-[2024-05-28 11:30] got prompt
-[2024-05-28 11:30] Requested to load ControlNet
-[2024-05-28 11:30] Loading 1 new model
-[2024-05-28 11:31] 100%|████████████████████████████████████| 30/30 [00:23<00:00,  1.53it/s]100%|████████████████████████████████████| 30/30 [00:23<00:00,  1.30it/s]
-[2024-05-28 11:31] Prompt executed in 24.97 seconds
-[2024-05-28 11:31] got prompt
-[2024-05-28 11:31] Requested to load ControlNet
-[2024-05-28 11:31] Loading 1 new model
-[2024-05-28 11:32] 100%|████████████████████████████████████| 30/30 [00:23<00:00,  1.53it/s]100%|████████████████████████████████████| 30/30 [00:23<00:00,  1.30it/s]
-[2024-05-28 11:32] Prompt executed in 26.89 seconds
-[2024-05-28 11:32] got prompt
-[2024-05-28 11:32] Requested to load ControlNet
-[2024-05-28 11:32] Loading 1 new model
-[2024-05-28 11:33] 100%|████████████████████████████████████| 30/30 [00:22<00:00,  1.47it/s]100%|████████████████████████████████████| 30/30 [00:22<00:00,  1.32it/s]
-[2024-05-28 11:33] Prompt executed in 26.46 seconds
-[2024-05-28 11:33] got prompt
-[2024-05-28 11:33] model_path is /src/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/ZoeD_M12_N.pt
-[2024-05-28 11:34] Requested to load ControlNet
-[2024-05-28 11:34] Loading 1 new model
-[2024-05-28 11:34] 100%|████████████████████████████████████| 30/30 [00:27<00:00,  1.21it/s]100%|████████████████████████████████████| 30/30 [00:27<00:00,  1.08it/s]
-[2024-05-28 11:34] Prompt executed in 46.24 seconds
-[2024-05-28 11:35] got prompt
-[2024-05-28 11:35] Requested to load ControlNet
-[2024-05-28 11:35] Loading 1 new model
-[2024-05-28 11:35] got prompt
-[2024-05-28 11:35] got prompt
-[2024-05-28 11:35] 
-[2024-05-28 11:35] Processing interrupted
-[2024-05-28 11:35] Prompt executed in 24.58 seconds
-[2024-05-28 11:35] Requested to load ControlNet
-[2024-05-28 11:35] Loading 1 new model
-[2024-05-28 11:35] got prompt
-[2024-05-28 11:36] 100%|████████████████████████████████████| 30/30 [00:33<00:00,  1.07s/it]100%|████████████████████████████████████| 30/30 [00:33<00:00,  1.12s/it]
-[2024-05-28 11:36] Prompt executed in 37.22 seconds
-[2024-05-28 11:36] Requested to load ControlNet
-[2024-05-28 11:36] Loading 1 new model
-[2024-05-28 11:37] 100%|████████████████████████████████████| 30/30 [00:37<00:00,  1.07s/it]100%|████████████████████████████████████| 30/30 [00:37<00:00,  1.24s/it]
-[2024-05-28 11:37] Prompt executed in 39.37 seconds
-[2024-05-28 11:37] got prompt
-[2024-05-28 11:37] model_path is /src/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/ZoeD_M12_N.pt
-[2024-05-28 11:37] Requested to load ControlNet
-[2024-05-28 11:37] Loading 1 new model
-[2024-05-28 11:38] 100%|████████████████████████████████████| 30/30 [00:22<00:00,  1.51it/s]100%|████████████████████████████████████| 30/30 [00:22<00:00,  1.34it/s]
-[2024-05-28 11:38] Prompt executed in 37.49 seconds
-[2024-05-28 12:18] got prompt
-[2024-05-28 12:18] model_path is /src/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/ZoeD_M12_N.pt
-[2024-05-28 12:18] Requested to load ControlNet
-[2024-05-28 12:18] Loading 1 new model
-[2024-05-28 12:18] 100%|████████████████████████████████████| 30/30 [00:19<00:00,  1.79it/s]100%|████████████████████████████████████| 30/30 [00:19<00:00,  1.53it/s]
-[2024-05-28 12:18] Prompt executed in 33.60 seconds
-[2024-05-28 12:19] got prompt
-[2024-05-28 12:19] Requested to load ControlNet
-[2024-05-28 12:19] Loading 1 new model
-[2024-05-28 12:19] 100%|████████████████████████████████████| 30/30 [00:20<00:00,  1.70it/s]100%|████████████████████████████████████| 30/30 [00:20<00:00,  1.49it/s]
-[2024-05-28 12:19] Prompt executed in 22.83 seconds
-[2024-05-28 12:20] got prompt
-[2024-05-28 12:20] Requested to load ControlNet
-[2024-05-28 12:20] Loading 1 new model
-[2024-05-28 12:20] got prompt
-[2024-05-28 12:20] 100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.59it/s]100%|████████████████████████████████████| 30/30 [00:21<00:00,  1.41it/s]
-[2024-05-28 12:20] Prompt executed in 22.31 seconds
-[2024-05-28 12:21] got prompt
-[2024-05-28 12:21] got prompt
-[2024-05-28 12:21] 100%|████████████████████████████████████| 30/30 [00:25<00:00,  1.23it/s]100%|████████████████████████████████████| 30/30 [00:25<00:00,  1.20it/s]
-[2024-05-28 12:21] Prompt executed in 26.13 seconds
-[2024-05-28 12:21] Processing interrupted
-[2024-05-28 12:21] Prompt executed in 0.01 seconds
-[2024-05-28 12:21] Requested to load ControlNet
-[2024-05-28 12:21] Loading 1 new model
-[2024-05-28 12:21] 
-[2024-05-28 12:21] Processing interrupted
-[2024-05-28 12:21] Prompt executed in 3.08 seconds
-[2024-05-28 12:21] got prompt
-[2024-05-28 12:21] Requested to load ControlNet
-[2024-05-28 12:21] Loading 1 new model
-[2024-05-28 12:21] got prompt
-[2024-05-28 12:21] 100%|████████████████████████████████████| 30/30 [00:25<00:00,  1.24it/s]100%|████████████████████████████████████| 30/30 [00:25<00:00,  1.19it/s]
-[2024-05-28 12:21] Prompt executed in 28.19 seconds
-[2024-05-28 12:21] Requested to load ControlNet
-[2024-05-28 12:21] Loading 1 new model
-[2024-05-28 12:22] 100%|████████████████████████████████████| 30/30 [00:30<00:00,  1.15it/s]100%|████████████████████████████████████| 30/30 [00:30<00:00,  1.01s/it]
-[2024-05-28 12:22] Prompt executed in 33.95 seconds
-[2024-05-28 12:22] got prompt
-[2024-05-28 12:22] Requested to load SDXLClipModel
-[2024-05-28 12:22] Loading 1 new model
-[2024-05-28 12:22] Requested to load ControlNet
-[2024-05-28 12:22] Loading 1 new model
-[2024-05-28 12:23] 100%|████████████████████████████████████| 30/30 [00:26<00:00,  1.19it/s]100%|████████████████████████████████████| 30/30 [00:26<00:00,  1.12it/s]
-[2024-05-28 12:23] Prompt executed in 33.31 seconds
-[2024-05-28 12:23] got prompt
-[2024-05-28 12:23] Requested to load ControlNet
-[2024-05-28 12:23] Loading 1 new model
-[2024-05-28 12:23] got prompt
-[2024-05-28 12:24] 100%|████████████████████████████████████| 30/30 [00:22<00:00,  1.50it/s]100%|████████████████████████████████████| 30/30 [00:22<00:00,  1.34it/s]
-[2024-05-28 12:24] Prompt executed in 23.42 seconds
-[2024-05-28 12:24] Requested to load ControlNet
-[2024-05-28 12:24] Loading 1 new model
-[2024-05-28 12:24] 100%|████████████████████████████████████| 30/30 [00:29<00:00,  1.15it/s]100%|████████████████████████████████████| 30/30 [00:29<00:00,  1.03it/s]
-[2024-05-28 12:24] Prompt executed in 32.34 seconds
-[2024-05-28 12:24] got prompt
-[2024-05-28 12:24] Requested to load SDXLClipModel
-[2024-05-28 12:24] Loading 1 new model
-[2024-05-28 12:24] Requested to load ControlNet
-[2024-05-28 12:24] Loading 1 new model
-[2024-05-28 12:25] 100%|████████████████████████████████████| 20/20 [00:15<00:00,  1.50it/s]100%|████████████████████████████████████| 20/20 [00:15<00:00,  1.30it/s]
-[2024-05-28 12:25] Prompt executed in 18.09 seconds
-[2024-05-28 12:26] got prompt
-[2024-05-28 12:26] model_path is /src/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts/lllyasviel/Annotators/ZoeD_M12_N.pt
-[2024-05-28 12:26] Requested to load SDXLClipModel
-[2024-05-28 12:26] Loading 1 new model
-[2024-05-28 12:26] Requested to load ControlNet
-[2024-05-28 12:26] Loading 1 new model
-[2024-05-28 12:26] 100%|████████████████████████████████████| 20/20 [00:13<00:00,  1.64it/s]100%|████████████████████████████████████| 20/20 [00:13<00:00,  1.43it/s]
-[2024-05-28 12:26] Prompt executed in 29.47 seconds
-[2024-05-28 12:31] 
-Stopped server
+[2024-08-15 14:50] Cannot import /src/ComfyUI/custom_nodes/ComfyUI-layerdiffuse module for custom nodes: No module named 'diffusers.models.unet_2d_blocks'
+[2024-08-15 14:50] Total VRAM 16101 MB, total RAM 64287 MB
+[2024-08-15 14:50] pytorch version: 2.4.0+cu121
+[2024-08-15 14:50] Set vram state to: HIGH_VRAM
+[2024-08-15 14:50] Device: cuda:0 NVIDIA RTX A4000 : cudaMallocAsync
+[2024-08-15 14:50] VAE dtype: torch.bfloat16
+[2024-08-15 14:50] [34mFizzleDorf Custom Nodes: [92mLoaded[0m
+[2024-08-15 14:50] [VideoHelperSuite] - [0;33mWARNING[0m - Failed to import imageio_ffmpeg
+[2024-08-15 14:50] [AnimateDiffEvo] - [0;31mERROR[0m - No motion models found. Please download one and place in: ['/src/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved/models', '/src/ComfyUI/models/animatediff_models']
+[2024-08-15 14:50] ### Loading: ComfyUI-Inspire-Pack (V0.59)
+[2024-08-15 14:50] [92m[tinyterraNodes] [32mLoaded[0m
+[2024-08-15 14:50] [34mWAS Node Suite: [0mOpenCV Python FFMPEG support is enabled[0m
+[2024-08-15 14:50] [34mWAS Node Suite: [0m`ffmpeg_bin_path` is set to: /usr/bin/ffmpeg[0m
+[2024-08-15 14:50] [34mWAS Node Suite: [0mFinished.[0m [32mLoaded[0m [0m212[0m [32mnodes successfully.[0m
+[2024-08-15 14:50] 
+Import times for custom nodes:
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/websocket_image_save.py
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-HyperSDXL1StepUnetScheduler
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-IC-Light-Native
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Logic
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-BRIA_AI-RMBG
+[2024-08-15 14:50]    0.0 seconds (IMPORT FAILED): /src/ComfyUI/custom_nodes/ComfyUI-CLIPSeg
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/comfyui-tooling-nodes
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/masquerade-nodes-comfyui
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI_InstantID
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI_essentials
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/comfyui_jankhidiffusion
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/comfyui_controlnet_aux
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI_UltimateSDUpscale
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Advanced-ControlNet
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Frame-Interpolation
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-KJNodes
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI-AnimateDiff-Evolved
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/Derfuu_ComfyUI_ModdedNodes
+[2024-08-15 14:50]    0.0 seconds: /src/ComfyUI/custom_nodes/ComfyUI_tinyterraNodes
+[2024-08-15 14:50]    0.1 seconds: /src/ComfyUI/custom_nodes/ComfyUI-PhotoMaker-Plus
+[2024-08-15 14:50]    0.1 seconds: /src/ComfyUI/custom_nodes/comfyui-reactor-node
+[2024-08-15 14:50]    0.1 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Inspire-Pack
+[2024-08-15 14:50]    0.1 seconds (IMPORT FAILED): /src/ComfyUI/custom_nodes/ComfyUI-layerdiffuse
+[2024-08-15 14:50]    0.1 seconds: /src/ComfyUI/custom_nodes/efficiency-nodes-comfyui
+[2024-08-15 14:50]    0.2 seconds: /src/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
+[2024-08-15 14:50]    0.2 seconds: /src/ComfyUI/custom_nodes/comfyui_segment_anything
+[2024-08-15 14:50]    0.3 seconds: /src/ComfyUI/custom_nodes/clipseg.py
+[2024-08-15 14:50]    0.4 seconds: /src/ComfyUI/custom_nodes/ComfyUI-Impact-Pack
+[2024-08-15 14:50]    1.1 seconds: /src/ComfyUI/custom_nodes/ComfyUI_FizzNodes
+[2024-08-15 14:50]    1.2 seconds: /src/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+[2024-08-15 14:50]    1.9 seconds: /src/ComfyUI/custom_nodes/was-node-suite-comfyui
+[2024-08-15 14:50]    2.9 seconds: /src/ComfyUI/custom_nodes/PuLID_ComfyUI
+[2024-08-15 14:50] 
+[2024-08-15 14:50] Setting output directory to: /tmp/outputs
+[2024-08-15 14:50] Setting input directory to: /tmp/inputs
+[2024-08-15 14:50] Starting server
+
+[2024-08-15 14:50] To see the GUI go to: http://127.0.0.1:8188
+[2024-08-15 14:50] got prompt
+[2024-08-15 14:50] Failed to validate prompt for output 58:
+[2024-08-15 14:50] * ImageResize+ 32:
+[2024-08-15 14:50]   - Required input is missing: keep_proportion
+[2024-08-15 14:50] Output will be ignored
+[2024-08-15 14:50] invalid prompt: {'type': 'prompt_outputs_failed_validation', 'message': 'Prompt outputs failed validation', 'details': '', 'extra_info': {}}
